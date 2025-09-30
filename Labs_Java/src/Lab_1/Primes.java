@@ -1,3 +1,5 @@
+package Lab_1;
+
 import java.lang.Math;
 
 public class Primes {
