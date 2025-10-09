@@ -3,10 +3,6 @@ package Lab_2;
 import java.lang.Math;
 
 
-
-
-
-
 // абстракция
 abstract class Figure{
 
