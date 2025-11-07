@@ -1,7 +1,6 @@
 package Lab_4;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class ArrayChecker {
 
@@ -23,11 +22,11 @@ public class ArrayChecker {
             System.out.println(avg);
 
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("Ошибка индекса"+ e.toString());
+            System.out.println("Ошибка индекса - "+ e.toString());
         } catch (NumberFormatException e) {
-            System.out.println("Ошибка не int" + e.toString());
+            System.out.println("Ошибка не int - " + e.toString());
         } catch (Exception e) {
-            System.out.println("Неопознанная ошибка" + e.toString());
+            System.out.println("Неопознанная ошибка - " + e.toString());
         } finally {
             System.out.println("End of working");
         }

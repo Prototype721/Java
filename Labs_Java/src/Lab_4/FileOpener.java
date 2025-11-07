@@ -10,7 +10,7 @@ public class FileOpener {
         FileInputStream fileOne = null;
         FileOutputStream fileTwo = null;
         try{
-             fileOne = new FileInputStream("File.txt");
+             fileOne = new FileInputStream("File_222.txt");
              fileTwo = new FileOutputStream("FileTwo.txt");
 
             //Files.copy(fileOne, fileTwo, StandardCopyOption.REPLACE_EXISTING);
@@ -20,10 +20,11 @@ public class FileOpener {
                 fileTwo.write(dataByte);
                 //fileOne.close();
             }
+            // int x = 5 / 0;
             fileOne.close();
             fileTwo.close();
             System.out.println("Данные из файла 1 скопированы в файл 2");
-        } catch (NoSuchFileException e){
+        } catch (FileNotFoundException e){ // NoSuchFileException
             System.out.println("Ошибка нет файла " + e.toString());
         } catch (IOException e) {
             System.out.println("Ошибка IO " + e.toString());

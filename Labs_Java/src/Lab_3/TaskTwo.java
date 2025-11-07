@@ -9,7 +9,6 @@ public class TaskTwo {
         String gmail;
         String extra;
 
-        // Constructor to initialize the contact
         public Contact(String name, String gmail, String extra) {
             this.name = name;
             this.gmail = gmail;
