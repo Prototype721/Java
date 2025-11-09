@@ -1,2 +1,2 @@
-
+Исключение java.util.InputMismatchException
 Исключение java.util.InputMismatchException

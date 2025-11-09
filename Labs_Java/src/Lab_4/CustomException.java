@@ -12,7 +12,7 @@ public class CustomException {
         try  {
             Path path = Paths.get("exceptions.txt");
             Files.write(path, message.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-
+            //throw new IOException("error");
         } catch (IOException ioEx) {
             System.out.println("Ошибка при записи в лог: " + ioEx.getMessage());
         }
@@ -25,12 +25,9 @@ public class CustomException {
             int number = scanner.nextInt();
             System.out.println("Число: " + number);
         } catch (InputMismatchException e) {
-            CustomInputMismatchException customException = new CustomInputMismatchException("Ошибка: введено нецелое число!");
+            CustomInputMismatchException customException = new CustomInputMismatchException("Ошибка: введено не число!");
             logException("Исключение " + e.toString() + "\n");
             System.out.println(customException.getMessage());
-        } catch (Exception e) {
-            logException("Исключение " + e.toString() + "\n");
-            System.out.println("Неопознанная ошибка: " + e.getMessage());
         } finally {
             scanner.close();
         }

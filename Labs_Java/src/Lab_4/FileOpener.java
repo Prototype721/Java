@@ -28,8 +28,6 @@ public class FileOpener {
             System.out.println("Ошибка нет файла " + e.toString());
         } catch (IOException e) {
             System.out.println("Ошибка IO " + e.toString());
-        } catch (Exception e) {
-            System.out.println("Неопознанная ошибка " + e.toString());
         } finally {
 
             System.out.println("End of working");

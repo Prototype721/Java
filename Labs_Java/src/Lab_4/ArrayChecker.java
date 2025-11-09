@@ -25,8 +25,6 @@ public class ArrayChecker {
             System.out.println("Ошибка индекса - "+ e.toString());
         } catch (NumberFormatException e) {
             System.out.println("Ошибка не int - " + e.toString());
-        } catch (Exception e) {
-            System.out.println("Неопознанная ошибка - " + e.toString());
         } finally {
             System.out.println("End of working");
         }

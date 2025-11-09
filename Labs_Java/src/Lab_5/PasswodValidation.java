@@ -13,6 +13,7 @@ public class PasswodValidation {
         }
     }
 
+
     public static void Check_password(String password) throws Exception {
         if (password.isEmpty()) {
             throw new Exception("Пустой пароль");

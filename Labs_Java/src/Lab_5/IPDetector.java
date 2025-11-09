@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class IPDetector {
     public static void main(String[] args){
-        String text = "0.0.0.0";
+        String text = "127.0.0.1";
         try {
             if(FindIP(text)){
                 System.out.println("IP");
