@@ -73,9 +73,10 @@ public class WarehouseForkJoin {
                 WarehouseTask leftTask = new WarehouseTask(items, start, mid);
                 WarehouseTask rightTask = new WarehouseTask(items, mid, end);
 
-                leftTask.fork(); // Запускаем левую задачу асинхронно
-                List<LoadResult> rightResult = rightTask.compute(); // Выполняем правую задачу
-                List<LoadResult> leftResult = leftTask.join(); // Ждем результат левой задачи
+                leftTask.fork();
+                rightTask.fork();
+                List<LoadResult> leftResult = leftTask.join();
+                List<LoadResult> rightResult = rightTask.join();
 
                 return mergeResults(leftResult, rightResult);
             }
@@ -238,9 +239,14 @@ public class WarehouseForkJoin {
 
         System.out.println("=============== ПЕРЕНОС ЗАВЕРШЕН ===============");
 
-        int totalTrips = loaders.stream().mapToInt(l -> l.tripsCompleted).sum();
-        int totalWeight = loaders.stream().mapToInt(l -> l.totalWeightCarried).sum();
-
+        int totalTrips = 0;
+        for (Loader loader : loaders) {
+            totalTrips += loader.tripsCompleted;
+        }
+        int totalWeight = 0;
+        for (Loader loader : loaders) {
+            totalWeight += loader.totalWeightCarried;
+        }
         System.out.println("Итого: " + totalTrips + " поездок, " + totalWeight + "кг перенесено");
 
         forkJoinPool.shutdown();
