@@ -4,9 +4,7 @@ public class CustomStack<T> {
     private T[] data;
     private int size;
 
-    public CustomStack() {
-        this(10);
-    }
+    public CustomStack() { this(10); }
 
     @SuppressWarnings("unchecked")
     public CustomStack(int capacity) {

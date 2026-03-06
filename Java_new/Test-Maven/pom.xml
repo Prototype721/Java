@@ -47,7 +47,7 @@
                 <artifactId>spotbugs-maven-plugin</artifactId>
                 <version>4.9.4.1</version>
                 <configuration>
-                    <effort>Max</effort>
+                    <!--<effort>Max</effort>-->
                     <threshold>Medium</threshold>
                     <!-- true/false  tut-->
                     <failOnError>false</failOnError>

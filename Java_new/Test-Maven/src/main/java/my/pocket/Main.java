@@ -28,7 +28,7 @@ public class Main {
             logger.info("Размер стека: {}", deserializedStack.getSize());
 
         } catch (Exception e) {
-            logger.error("Произошла ошибка: ", e);
+            logger.error("Произошла ошибка при логгировании: ", e);
         }
     }
 }
